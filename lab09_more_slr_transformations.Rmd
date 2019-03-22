@@ -1,0 +1,59 @@
+---
+title: "Simple Linear Regression: Conditions and Transformations"
+subtitle: "Sleuth3 Chapter 8"
+output:
+  pdf_document:
+    fig_height: 2.8
+    fig_width: 6
+  html_document:
+    fig_height: 3
+    fig_width: 5
+  word_document:
+    fig_height: 3
+    fig_width: 5
+header-includes:
+  - \usepackage{booktabs}
+  - \usepackage{vwcol}
+geometry: margin=0.5in
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(cache = TRUE)
+library(ggplot2)
+library(readr)
+library(dplyr)
+library(gridExtra)
+```
+
+## Example 1: Adapted from Exercise 8.24 in Sleuth3
+
+Quote from the book:
+
+> A high respiratory rate is a potential diagnostic indicator of respiratory infection in children.  To judge whether a respiratory rate is truly "high", however, a physician must have a clear picture of the distribution of normal respiratory rates.  To this end, Italian researchers measured the respiratory rates of 618 children between the ages of 15 days and 3 years.  Analyze the data and provide a statistical summary.
+
+The following R code reads the data in.
+
+```{r, echo=FALSE, message=FALSE}
+respiration <- read_csv("http://www.evanlray.com/data/sleuth3/ex0824_respiratory_rates.csv")
+head(respiration)
+```
+
+Our explanatory variable is `Age` (in months), and the response is `Rate` (breaths per minute).
+
+#### 1. Make a suitable plot of the data.
+
+```{r}
+
+```
+
+#### 2. Through trial and error, find a suitable transformation of the data so that the linear regression conditions are satisfied as well as possible.  (Let's assume the measurements for different children in the sample can be regarded as independent.)  You can probably get away with only a transformation of the response variable.
+
+```{r}
+
+```
+
+#### 3. Obtain 95% prediction intervals for the respiratory rates *on the original data scale* for children of ages 5 months, 10 months, 20 months, and 30 months.  Visually compare your numbers with the plot from part 1; they should seem reasonable.
+
+```{r}
+
+```
